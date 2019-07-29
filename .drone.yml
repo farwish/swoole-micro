@@ -1,0 +1,13 @@
+kind: pipeline
+name: default
+
+steps:
+- name: deps
+  image: phvia/web-swoole-4.2.13
+  commands:
+  - composer -v
+
+- name: deploy
+  image: phvia/web-swoole-4.2.13
+  commands:
+  - php -v
